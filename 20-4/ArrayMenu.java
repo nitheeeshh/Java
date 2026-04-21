@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ArrayMenu 
+class ArrayMenu 
 {
     public static void main(String[] args) 
 	{
