@@ -26,9 +26,13 @@ UPDATE bank_account
 SET balance = balance + 2000
 WHERE account_id = 1;
 
+commit
+
 SELECT * FROM bank_account;
 
 ROLLBACK;
+
+savepoint
 
 SELECT * FROM bank_account;
 

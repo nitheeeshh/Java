@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION calculate_total(
+ REPLACE FUNCTION calculate_total(
     mark1 INT,
     mark2 INT, 
     mark3 INT
@@ -117,6 +117,25 @@ num:=num-1;
 end loop;
 end
 $$
+
+create table students(stuid int primary key,sname varchar not null,phn bigint not null ,age int not null )
+ 
+ 
+ 
+create table stuatt(stuid int ,sname varchar,satt time)
+
+
+create or replace  function  stu()
+returns trigger
+language plpgsql
+as $$
+begin
+insert into stuatt(stuid,sname,satt) values(new.stuid,new.sname,new.satt);
+return new;
+end;
+$$;
+
+create trigger trig after insert on students for each row execute function stu();
 
 
 

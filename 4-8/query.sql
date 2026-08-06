@@ -1,4 +1,4 @@
--- ============================================
+===========================================
 -- Employee Management System using
 -- Stored Procedure and Triggers (MySQL)
 -- ============================================
@@ -19,6 +19,9 @@ CREATE TABLE employee (
     emp_name VARCHAR(100),
     salary DECIMAL(10,2)
 );
+
+
+
 
 -- ============================================
 -- BEFORE INSERT Trigger
